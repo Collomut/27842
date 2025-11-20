@@ -80,6 +80,8 @@ public static void main(String[] args) {
 	int Amount_paid=0;
 	int Ticket_number=0;
 	String IssueDate=null;
+	int taxes=0;
+	int discount=0;
 	
 	System.out.println("Enter Entity ID");
 	Entity_id = sc.nextInt();
@@ -157,6 +159,14 @@ public static void main(String[] args) {
 	System.out.println("Enter the contact");
 	contact = sc.nextInt();
 	sc.nextLine(); 
+	   
+	System.out.println("Enter the Taxes");
+	taxes=sc.nextInt();
+	sc.next();
+	
+	
+	System.out.println("Enter the discount");
+	sc.nextInt();
 	
 	System.out.println("\nEnter the Booking date");
 	Booking_date = sc.nextLine();
@@ -189,7 +199,7 @@ public static void main(String[] args) {
 		Pilot_name, License_number, Experience_years, Crew_name, Role, shift, Passenger_name, age, gender, contact, Booking_date, Seat_number, Travel_class, 
 		Payment_date, Payment_method, Amount_paid, Ticket_number, IssueDate);
 	
-	
+	tt.calculateFare(taxes, discount);
     sc.close();
 }
 
