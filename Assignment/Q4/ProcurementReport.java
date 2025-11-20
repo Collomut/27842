@@ -155,7 +155,7 @@ public class ProcurementReport extends Invoice {
 						Supplier_name, Supplier_tin, contact, Product_name, Unit_price, quantity, ponumber, Order_date, Total_amount,Delivery_date, 
 						Delivered_by, Inspector_name, status, Remarks, Invoice_no, Invoice_amount, Report_date, Summary);
 				
-		        
+		        pr.calculateTotal();
 		        sc.close();
 			}
 
