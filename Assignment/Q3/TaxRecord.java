@@ -72,6 +72,7 @@ Scanner sc=new Scanner(System.in);
 		int Payment_amount=0;
 		int Receipt_no=0;
 		int Total_tax=0;
+		double credits=0.0;
 		
 
 		System.out.println("Enter Entity ID");
@@ -151,6 +152,10 @@ Scanner sc=new Scanner(System.in);
 
 		System.out.println("Enter The Payment amount");
 		Payment_amount = sc.nextInt();
+		
+		System.out.println("Enter the Credits");
+		credits=sc.nextDouble();
+		sc.nextLine();
 
 		System.out.println("Enter the Receipt Number");
 		Receipt_no = sc.nextInt();
@@ -164,7 +169,7 @@ Scanner sc=new Scanner(System.in);
 				address, Employer_name, Employer_tin, contact, Employee_name, Salary, Employee_tin, Declaration_month, Total_income, Assessment_date, 
             Assessed_tax, Payment_date, Payment_amount, Receipt_no, Total_tax);
 
-        
+        tr.computeTax(credits);
         sc.close();
 
 	}
